@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #030712;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1c2b4d;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00f5ff;
+}
+
+/* Cyber Matrix Background Grid with Dual Gradients */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(28, 43, 77, 0.3) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(28, 43, 77, 0.3) 1px, transparent 1px);
+}
+
+.bg-cinematic-mesh {
+  background: 
+    radial-gradient(circle at 15% 15%, rgba(0, 245, 255, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 85% 25%, rgba(255, 42, 95, 0.07) 0%, transparent 50%),
+    radial-gradient(circle at 50% 65%, rgba(168, 85, 247, 0.06) 0%, transparent 55%),
+    radial-gradient(circle at 80% 85%, rgba(0, 245, 255, 0.05) 0%, transparent 45%);
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: rgba(9, 14, 28, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(28, 43, 77, 0.65);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(15, 24, 47, 0.85);
+  border-color: rgba(0, 245, 255, 0.45);
+  box-shadow: 0 10px 30px -10px rgba(0, 245, 255, 0.25), 0 0 15px -3px rgba(255, 42, 95, 0.2);
+  transform: translateY(-4px);
+}
+
+/* Floating Island Header Style */
+.floating-header-glass {
+  background: rgba(8, 13, 26, 0.82);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(0, 245, 255, 0.2);
+  box-shadow: 
+    0 10px 40px -10px rgba(0, 0, 0, 0.7),
+    0 0 20px -5px rgba(0, 245, 255, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Round Cut Logo Ring Animation */
+.round-logo-frame {
+  position: relative;
+  border-radius: 9999px;
+  padding: 2.5px;
+  background: linear-gradient(135deg, #00f5ff, #ff2a5f, #a855f7);
+  box-shadow: 0 0 16px rgba(0, 245, 255, 0.4), 0 0 10px rgba(255, 42, 95, 0.3);
+  transition: all 0.3s ease;
+}
+
+.round-logo-frame:hover {
+  transform: scale(1.05) rotate(3deg);
+  box-shadow: 0 0 25px rgba(0, 245, 255, 0.6), 0 0 20px rgba(255, 42, 95, 0.5);
+}
+
+/* Neon Glow Text & Badges */
+.glow-text-cyan {
+  text-shadow: 0 0 12px rgba(0, 245, 255, 0.6);
+}
+
+.glow-text-crimson {
+  text-shadow: 0 0 12px rgba(255, 42, 95, 0.65);
+}
+
+.glow-text-purple {
+  text-shadow: 0 0 12px rgba(168, 85, 247, 0.6);
+}
