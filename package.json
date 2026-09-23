@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node -e \"const fs = require('fs'); if (fs.existsSync('dist')) fs.rmSync('dist', { recursive: true, force: true });\" && vite build",
+    "prebuild": "node -e \"const fs=require('fs'); ['dist', 'public/_redirects', 'dist/_redirects'].forEach(p => { if (fs.existsSync(p)) fs.rmSync(p, {recursive: true, force: true}); });\"",
+    "build": "vite build",
+    "postbuild": "node -e \"const fs=require('fs'); if (fs.existsSync('dist/_redirects')) fs.rmSync('dist/_redirects', {force: true});\"",
     "preview": "vite preview"
   },
   "dependencies": {
