@@ -38,6 +38,7 @@ export default function Terminal() {
   - nexload     : Deep-dive into Nexload Android Downloader
   - taskflow    : Deep-dive into TaskFlow offline productivity app
   - contact     : Get email (rifatmohisn716@gmail.com) and links
+  - cv / resume : Download full Curriculum Vitae (PDF)
   - github      : Launch GitHub profile (@Rifat-Profiles)
   - matrix      : Trigger holographic matrix sequence
   - clear       : Clear terminal window
@@ -128,6 +129,21 @@ Availability  : Open for Android App & Web Development opportunities.`,
       case "email":
         newHistory.push({ text: `Opening mailto:${PERSONAL_INFO.email}...`, type: "output" });
         window.location.href = `mailto:${PERSONAL_INFO.email}`;
+        break;
+
+      case "cv":
+      case "resume":
+        newHistory.push({
+          text: `[CURRICULUM VITAE / RESUME]
+Candidate : ${PERSONAL_INFO.name}
+Role      : ${PERSONAL_INFO.title}
+Location  : ${PERSONAL_INFO.location}
+Status    : Available for engineering opportunities
+Action    : Opening MD_Rifat_Mohsin_Tapader_CV.pdf...`,
+          type: "cyan"
+        });
+        soundManager.playSuccess();
+        window.open('/Rifat_Mohsin_Tapader_CV.pdf', '_blank');
         break;
 
       case "matrix":

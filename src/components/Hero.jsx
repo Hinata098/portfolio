@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Terminal, Github, Sparkles, MapPin } from 'lucide-react';
+import { ArrowRight, Terminal, Github, Sparkles, MapPin, FileText } from 'lucide-react';
 import Hero3DCanvas from './canvas/Hero3DCanvas';
 import { soundManager } from '../utils/audio';
 import { PERSONAL_INFO } from '../data/portfolioData';
@@ -109,6 +109,19 @@ export default function Hero() {
               >
                 <Terminal size={16} />
                 <span>Dev Console</span>
+              </a>
+
+              <a
+                href="/Rifat_Mohsin_Tapader_CV.pdf"
+                download="MD_Rifat_Mohsin_Tapader_CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => soundManager.playClick()}
+                onMouseEnter={() => soundManager.playHover()}
+                className="px-5 py-3.5 rounded-xl font-mono text-xs sm:text-sm font-semibold uppercase tracking-wider bg-cyber-card border border-emerald-500/50 text-emerald-300 hover:bg-emerald-500/10 hover:border-emerald-400 flex items-center gap-2 transition-all"
+              >
+                <FileText size={16} />
+                <span>Download CV</span>
               </a>
 
               <a
